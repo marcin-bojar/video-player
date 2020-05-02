@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    background-image: linear-gradient(to right bottom, #9fb7c0, #f1e8f7);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+}
+
+h1 {
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    color: #363636;
+}
+
+.player {
+    width: 60%;
+    background-image: linear-gradient(45deg, #abbb86, #ccb370);
+    /* background-color: #e4e4e4; */
+    border-radius: 10px;
+    border: 1px solid #000;
+    border-top: none;
+    position: relative;
+}
+
+.screen {
+    width: 100%;
+    background-color: #000000 !important;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+
+.controls {
+    margin: 1.5rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    
+}
+
+.btn {
+    margin-right: 1.25rem;  
+    display: inline-block;
+    padding: .5rem 1.25rem;
+    border: 1px solid #afafaf;
+    border-radius: 5px;
+    /* background-color: #fcfcfc; */
+    background-image: radial-gradient(#e2e2e2 40%, #b8b8b8);
+    cursor: pointer;
+    box-shadow: 0 .5rem .5rem rgba(0,0,0,.4);
+    transition: all .1s;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:active {
+    box-shadow: 0 .3rem .3rem rgba(0,0,0,.2);
+    transform: scale(.97);
+}
+
+.btn .fa-play {
+    color: #00af17;
+}
+
+.btn .fa-stop {
+    color: #696969;
+}
+
+.btn .fa-pause {
+    color: #1796fd;
+}
+
+.inline-btn {
+    position: absolute;
+    bottom: 7rem;
+    right: 1rem;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    visibility: hidden;
+    cursor: pointer;
+    transition: all .2s;
+    height: 5rem;
+    width: 5rem;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: #ff4400a2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inline-btn:hover {
+    background-color: #ff4400;
+}
+
+.inline-btn:focus {
+    outline: none;
+}
+
+.player:hover .inline-btn {
+   visibility: visible;
+}
+
+input[type='range'] {
+   margin-right: 1rem;  
+}
+
+span {
+    font-size: 1.7rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .player {
+        width: 95%;
+    }
+
+    .btn {
+        padding: .5rem 1rem;
+    }
+
+    .controls {
+        margin: 1rem 0;
+    }
+}
+
